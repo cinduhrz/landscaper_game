@@ -4,7 +4,11 @@ hasPushLawnMower = False
 hasBatPowLawnMower = False
 hasTeam = False
 
-while((hasTeam == False) and (money < 1000)):
+# Welcome message
+print("Welcome to Landscaper! You are starting a landscaping business, but all you have are your teeth. Make money cutting lawns and buy new tools to make more money to work your way up. You win when you have a team working for you and at least $1000. \n\n")
+
+## use OR (not and), because while EITHER of these is true, the game should keep running (because you need BOTH to be false to win the game)
+while((money < 1000) or (hasTeam == False)):
     
     user_choice = input("[1] Cut Lawns with Teeth \n[2] Buy Scissors ($5) \n[3] Cut Lawns with Scissors \n[4] Buy Push Lawnmower ($25) \n[5] Cut Lawns with Push Lawnmower \n[6] Buy Battery-Powered Lawnmower ($250) \n[7] Cut Lawns with Battery-Powered Lawnmower \n[8] Hire a Team of Starving Students ($500) \n[9] Cut Lawns Using Team of Starving Students \n[10] Check Money ")
     

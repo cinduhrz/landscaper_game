@@ -5,7 +5,7 @@ hasBatPowLawnMower = False
 
 while(True):
     
-    user_choice = input("[1] Cut Lawns with Teeth [2] Buy Scissors ($5) [3] Cut Lawns with Scissors [4] Buy Push Lawnmower ($25) [5] Cut Lawns with Push Lawnmower [6] Buy Battery-Powered Lawnmower ($250) [10] Check Money ")
+    user_choice = input("[1] Cut Lawns with Teeth \n[2] Buy Scissors ($5) \n[3] Cut Lawns with Scissors \n[4] Buy Push Lawnmower ($25) \n[5] Cut Lawns with Push Lawnmower \n[6] Buy Battery-Powered Lawnmower ($250) \n[7] Cut Lawns with Battery-Powered Lawnmower \n[10] Check Money ")
     
     if (user_choice == "1"):
         money += 1
@@ -64,5 +64,13 @@ while(True):
         else:
             print("Not enough money. Cut more lawns!\n")
             
+    if (user_choice == "7"):
+        # check if user has lawnmower
+        if (hasBatPowLawnMower == True):
+            money += 100
+            print(f"You cut lawns with the battery-powered lawnmower and earned $100! Total money: ${money}\n")
+        else:
+            print("You don't have a battery-powered lawnmower yet. Buy one first!\n")
+            
     if (user_choice == "10"):
-        print(f"Total money: ${money}")
+        print(f"Total money: ${money}\n")

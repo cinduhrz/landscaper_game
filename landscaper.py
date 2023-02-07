@@ -2,10 +2,11 @@ money = 0
 hasScissors = False
 hasPushLawnMower = False
 hasBatPowLawnMower = False
+hasTeam = False
 
 while(True):
     
-    user_choice = input("[1] Cut Lawns with Teeth \n[2] Buy Scissors ($5) \n[3] Cut Lawns with Scissors \n[4] Buy Push Lawnmower ($25) \n[5] Cut Lawns with Push Lawnmower \n[6] Buy Battery-Powered Lawnmower ($250) \n[7] Cut Lawns with Battery-Powered Lawnmower \n[10] Check Money ")
+    user_choice = input("[1] Cut Lawns with Teeth \n[2] Buy Scissors ($5) \n[3] Cut Lawns with Scissors \n[4] Buy Push Lawnmower ($25) \n[5] Cut Lawns with Push Lawnmower \n[6] Buy Battery-Powered Lawnmower ($250) \n[7] Cut Lawns with Battery-Powered Lawnmower \n[8] Hire a Team of Starving Students ($500) \n[10] Check Money ")
     
     if (user_choice == "1"):
         money += 1
@@ -71,6 +72,19 @@ while(True):
             print(f"You cut lawns with the battery-powered lawnmower and earned $100! Total money: ${money}\n")
         else:
             print("You don't have a battery-powered lawnmower yet. Buy one first!\n")
+            
+    if (user_choice == "8"):
+        if (hasTeam == True):
+            print("You already have a team of starving students.\n")
+        elif (money >= 500):
+            print(hasTeam)
+            money -= 500
+            hasTeam = True
+            print(hasTeam)
+            print(f"You hired a team of starving students! Now you can use them to cut lawns for you.\n")
+        else:
+            print("Not enough money. Cut more lawns!\n")
+        
             
     if (user_choice == "10"):
         print(f"Total money: ${money}\n")
